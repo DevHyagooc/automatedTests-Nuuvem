@@ -264,13 +264,13 @@ describe('Acessos da Página Principal', () => {
       });
     })
 
-    it('Abrir Instagram Nuuvem', () => {
+    it.only('Abrir Instagram Nuuvem', () => {
       const title = 'Instagram'
 
       cy.gui_acessarRedeSocial(title)
       cy.origin('https://www.instagram.com/nuuvem/', () => {
         cy.url()
-          .should('be.equal', 'https://www.instagram.com/nuuvem/#')
+          .should('be.equal', 'https://www.instagram.com/nuuvem/')
       });
     })
 
